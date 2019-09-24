@@ -14,8 +14,10 @@
             <Label TextColor="White">Xamarin.Forms 4.0 Demo</Label>
         </StackLayout>
     </Shell.FlyoutHeader>
+
     <ShellContent Title="Programm" ContentTemplate="{DataTemplate sessions:SessionsPage}"/>
     <ShellContent Title="Sprecher" ContentTemplate="{DataTemplate speakers:SpeakersPage}"/>
 
+    <MenuItem Text="Login/Logout" Command="{Binding LoginCommand}"></MenuItem>
 
 </Shell>
