@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.Visuals.VisualsDemoPage"
-             Title="VisualsDemo">
+             Title="VisualsDemo"
+             Visual="Material">
     <Shell.BackgroundColor>DarkGreen</Shell.BackgroundColor>
     <ContentPage.Content>
         <StackLayout>
