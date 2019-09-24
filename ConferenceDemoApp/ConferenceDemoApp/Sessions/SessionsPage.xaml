@@ -7,7 +7,9 @@
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.Sessions.SessionsPage">
     <CollectionView Margin="20"
-                    ItemsSource="{x:Static sessions:SessionData.Sessions}">
+                    ItemsSource="{x:Static sessions:SessionData.Sessions}"
+                    SelectionMode="Single"
+                    SelectionChanged="SessionSelected">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout Padding="10">

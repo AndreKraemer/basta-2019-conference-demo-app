@@ -7,19 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ConferenceDemoApp.Speakers
+namespace ConferenceDemoApp.Sessions
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SpeakersPage : ContentPage
+    public partial class SessionDetailsPage : ContentPage
     {
-        public SpeakersPage()
+        public SessionDetailsPage()
         {
             InitializeComponent();
         }
-        private async void SpeakerSelected(object sender, SelectionChangedEventArgs e)
-        {
-            await Shell.Current.GoToAsync("speakers/details");
-        }
-
     }
 }

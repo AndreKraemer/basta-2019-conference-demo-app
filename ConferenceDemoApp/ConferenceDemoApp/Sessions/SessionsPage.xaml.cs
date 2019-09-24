@@ -16,5 +16,10 @@ namespace ConferenceDemoApp.Sessions
         {
             InitializeComponent();
         }
+        private async void SessionSelected(object sender, SelectionChangedEventArgs e)
+        {
+            await Shell.Current.GoToAsync("sessions/details");
+        }
+
     }
 }

@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace ConferenceDemoApp.Speakers
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SpeakersPage : ContentPage
+    public partial class SpeakerDetailsPage : ContentPage
     {
-        public SpeakersPage()
+        public SpeakerDetailsPage()
         {
             InitializeComponent();
         }
-        private async void SpeakerSelected(object sender, SelectionChangedEventArgs e)
-        {
-            await Shell.Current.GoToAsync("speakers/details");
-        }
-
     }
 }

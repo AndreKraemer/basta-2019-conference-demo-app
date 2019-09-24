@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using ConferenceDemoApp.Sessions;
+using ConferenceDemoApp.Speakers;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,6 +22,13 @@ namespace ConferenceDemoApp
             InitializeComponent();
             LoginCommand = new Command(Login);
             BindingContext = this;
+            RegisterRoutes();
+        }
+
+        private void RegisterRoutes()
+        {
+            Routing.RegisterRoute("speakers/details", typeof(SpeakerDetailsPage));
+            Routing.RegisterRoute("sessions/details", typeof(SessionDetailsPage));
         }
 
         private void Login()

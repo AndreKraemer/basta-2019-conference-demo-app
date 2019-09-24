@@ -7,7 +7,9 @@
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.Speakers.SpeakersPage">
     <CollectionView Margin="20"
-                    ItemsSource="{x:Static speakers:SpeakerData.Speakers}">
+                    ItemsSource="{x:Static speakers:SpeakerData.Speakers}"
+                    SelectionMode="Single"
+                    SelectionChanged="SpeakerSelected">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout Padding="10">
