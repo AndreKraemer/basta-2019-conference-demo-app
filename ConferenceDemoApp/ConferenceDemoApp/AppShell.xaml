@@ -8,6 +8,12 @@
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.AppShell">
 
+    <Shell.FlyoutHeader>
+        <StackLayout BackgroundColor="DarkRed" Padding="20">
+            <Label TextColor="White" FontSize="Large">BASTA 2019</Label>
+            <Label TextColor="White">Xamarin.Forms 4.0 Demo</Label>
+        </StackLayout>
+    </Shell.FlyoutHeader>
     <ShellContent Title="Programm" ContentTemplate="{DataTemplate sessions:SessionsPage}"/>
     <ShellContent Title="Sprecher" ContentTemplate="{DataTemplate speakers:SpeakersPage}"/>
 
