@@ -18,7 +18,11 @@ namespace ConferenceDemoApp.Speakers
         }
         private async void SpeakerSelected(object sender, SelectionChangedEventArgs e)
         {
-            await Shell.Current.GoToAsync("speakers/details");
+            var id = (e.CurrentSelection.FirstOrDefault() as Speaker)?.Id;
+            if (id.HasValue)
+            {
+                await Shell.Current.GoToAsync($"speakers/details?id={id.Value}");
+            }
         }
 
     }

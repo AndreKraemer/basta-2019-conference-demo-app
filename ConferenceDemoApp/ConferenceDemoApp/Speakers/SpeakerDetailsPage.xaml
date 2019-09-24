@@ -4,12 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ConferenceDemoApp.Speakers.SpeakerDetailsPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="SpeakerDetails"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             x:Class="ConferenceDemoApp.Speakers.SpeakerDetailsPage"
+             Title="{Binding Name}">
+    <StackLayout Margin="20">
+        <Label FontSize="Large" FontAttributes="Bold" Text="{Binding Name}"/>
+        <Label FontAttributes="Italic" Text="{Binding Company}"/>
+        <Label Text="{Binding Bio}"/>
+    </StackLayout>
 </ContentPage>

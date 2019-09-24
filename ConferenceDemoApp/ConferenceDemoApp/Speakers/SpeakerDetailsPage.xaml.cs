@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace ConferenceDemoApp.Speakers
 {
+    [QueryProperty("SpeakerId", "id")]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SpeakerDetailsPage : ContentPage
     {
@@ -16,5 +17,18 @@ namespace ConferenceDemoApp.Speakers
         {
             InitializeComponent();
         }
+
+        public string SpeakerId
+        {
+            set
+            {
+                if (int.TryParse(Uri.UnescapeDataString(value), out var id))
+                {
+                    BindingContext = SpeakerData.Speakers.FirstOrDefault(x => x.Id == id);
+                }
+
+            }
+        }
+
     }
 }

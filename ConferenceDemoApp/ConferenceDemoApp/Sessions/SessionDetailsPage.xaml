@@ -5,11 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.Sessions.SessionDetailsPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Session Details"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout Margin="20">
+        <Label FontSize="Large" FontAttributes="Bold" Text="{Binding Title}"/>
+        <Label FontAttributes="Italic" Text="{Binding Speaker}"/>
+        <Label Text="{Binding Description}"/>
+    </StackLayout>
 </ContentPage>

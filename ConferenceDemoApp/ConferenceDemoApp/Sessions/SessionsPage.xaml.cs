@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace ConferenceDemoApp.Sessions
 {
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SessionsPage : ContentPage
     {
@@ -18,7 +19,11 @@ namespace ConferenceDemoApp.Sessions
         }
         private async void SessionSelected(object sender, SelectionChangedEventArgs e)
         {
-            await Shell.Current.GoToAsync("sessions/details");
+            var id = (e.CurrentSelection.FirstOrDefault() as Session)?.Id;
+            if (id.HasValue)
+            {
+                await Shell.Current.GoToAsync($"sessions/details?id={id.Value}");
+            }
         }
 
     }
