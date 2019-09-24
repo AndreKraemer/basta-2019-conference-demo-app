@@ -7,14 +7,13 @@
              xmlns:speakers="clr-namespace:ConferenceDemoApp.Speakers;assembly=ConferenceDemoApp"
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.AppShell">
-    <FlyoutItem Title="Programm">
-        <Tab>
+    <TabBar>
+        <Tab Title="Programm">
             <ShellContent ContentTemplate="{DataTemplate sessions:SessionsPage}"/>
         </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Sprecher">
-        <Tab>
+        <Tab Title="Sprecher">
             <ShellContent  ContentTemplate="{DataTemplate speakers:SpeakersPage}"/>
         </Tab>
-    </FlyoutItem>
+    </TabBar>
+
 </Shell>
