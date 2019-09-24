@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ConferenceDemoApp.Visuals.VisualsDemoPage"
+             Title="VisualsDemo">
+    <Shell.BackgroundColor>DarkGreen</Shell.BackgroundColor>
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator IsRunning="true" />
+            <Button Text="Enabled" 
+                    HorizontalOptions="FillAndExpand" />
+            <Button Text="Disabled" 
+                    IsEnabled="false" 
+                    HorizontalOptions="FillAndExpand" />
+            <CheckBox IsEnabled="false"
+                      HorizontalOptions="CenterAndExpand" />
+            <CheckBox IsChecked="true"
+                      IsEnabled="false"
+                      HorizontalOptions="CenterAndExpand" />
+            <DatePicker></DatePicker>
+            <Entry Placeholder="Name" Text="Wilhelm Brause"></Entry>
+            <ProgressBar Progress="0.5" />
+            <Slider Minimum="-100" 
+                    Maximum="100" />
+            <Stepper />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

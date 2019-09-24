@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:sessions="clr-namespace:ConferenceDemoApp.Sessions;assembly=ConferenceDemoApp"
              xmlns:speakers="clr-namespace:ConferenceDemoApp.Speakers;assembly=ConferenceDemoApp"
+             xmlns:visuals="clr-namespace:ConferenceDemoApp.Visuals;assembly=ConferenceDemoApp"
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.AppShell"
              TitleColor="White"
@@ -24,6 +25,7 @@
     </FlyoutItem>
     
     <ShellContent Title="Sprecher" ContentTemplate="{DataTemplate speakers:SpeakersPage}"/>
+    <ShellContent Title="Visuals Demo" ContentTemplate="{DataTemplate visuals:VisualsDemoPage}"/>
 
     <MenuItem Text="Login/Logout" Command="{Binding LoginCommand}"></MenuItem>
 
