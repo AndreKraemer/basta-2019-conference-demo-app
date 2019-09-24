@@ -6,6 +6,7 @@
              xmlns:sessions="clr-namespace:ConferenceDemoApp.Sessions;assembly=ConferenceDemoApp"
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.Sessions.FavoriteSessionsPage">
+    <Shell.BackgroundColor>Gold</Shell.BackgroundColor>
     <Shell.SearchHandler>
         <sessions:SessionsSearchHandler Placeholder="Suche nach Session ..."
                                         ShowsResults="true">

@@ -6,7 +6,10 @@
              xmlns:sessions="clr-namespace:ConferenceDemoApp.Sessions;assembly=ConferenceDemoApp"
              xmlns:speakers="clr-namespace:ConferenceDemoApp.Speakers;assembly=ConferenceDemoApp"
              mc:Ignorable="d"
-             x:Class="ConferenceDemoApp.AppShell">
+             x:Class="ConferenceDemoApp.AppShell"
+             TitleColor="White"
+             TabBarDisabledColor="Gray"
+             BackgroundColor="DarkBlue">
 
     <Shell.FlyoutHeader>
         <StackLayout BackgroundColor="DarkRed" Padding="20">
