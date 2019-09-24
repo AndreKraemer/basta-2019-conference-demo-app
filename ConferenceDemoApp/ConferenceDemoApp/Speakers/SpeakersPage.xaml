@@ -6,6 +6,11 @@
              xmlns:speakers="clr-namespace:ConferenceDemoApp.Speakers;assembly=ConferenceDemoApp"
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.Speakers.SpeakersPage">
+    <Shell.SearchHandler>
+        <speakers:SpeakersSearchHandler Placeholder="Name des Sprechers ..."
+                                        ShowsResults="true"
+                                        DisplayMemberName="Name" />
+    </Shell.SearchHandler>
     <CollectionView Margin="20"
                     ItemsSource="{x:Static speakers:SpeakerData.Speakers}"
                     SelectionMode="Single"

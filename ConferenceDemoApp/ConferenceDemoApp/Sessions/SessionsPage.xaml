@@ -6,6 +6,19 @@
              xmlns:sessions="clr-namespace:ConferenceDemoApp.Sessions;assembly=ConferenceDemoApp"
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.Sessions.SessionsPage">
+    <Shell.SearchHandler>
+        <sessions:SessionsSearchHandler Placeholder="Suche nach Session ..."
+                                        ShowsResults="true">
+            <sessions:SessionsSearchHandler.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label FontAttributes="Bold" Text="{Binding Title}"></Label>
+                        <Label FontAttributes="Italic" Text="{Binding Description}"></Label>
+                    </StackLayout>
+                </DataTemplate>
+            </sessions:SessionsSearchHandler.ItemTemplate>
+        </sessions:SessionsSearchHandler>
+    </Shell.SearchHandler>
     <CollectionView Margin="20"
                     ItemsSource="{x:Static sessions:SessionData.Sessions}"
                     SelectionMode="Single"
