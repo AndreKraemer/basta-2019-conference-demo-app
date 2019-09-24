@@ -15,7 +15,11 @@
         </StackLayout>
     </Shell.FlyoutHeader>
 
-    <ShellContent Title="Programm" ContentTemplate="{DataTemplate sessions:SessionsPage}"/>
+    <FlyoutItem Title="Programm">
+        <ShellContent Title="Programm" ContentTemplate="{DataTemplate sessions:SessionsPage}"/>
+        <ShellContent Title="Favoriten" ContentTemplate="{DataTemplate sessions:FavoriteSessionsPage}"/>
+    </FlyoutItem>
+    
     <ShellContent Title="Sprecher" ContentTemplate="{DataTemplate speakers:SpeakersPage}"/>
 
     <MenuItem Text="Login/Logout" Command="{Binding LoginCommand}"></MenuItem>
