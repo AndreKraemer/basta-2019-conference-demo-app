@@ -7,13 +7,9 @@
              xmlns:speakers="clr-namespace:ConferenceDemoApp.Speakers;assembly=ConferenceDemoApp"
              mc:Ignorable="d"
              x:Class="ConferenceDemoApp.AppShell">
-    <TabBar>
-        <Tab Title="Programm">
-            <ShellContent ContentTemplate="{DataTemplate sessions:SessionsPage}"/>
-        </Tab>
-        <Tab Title="Sprecher">
-            <ShellContent  ContentTemplate="{DataTemplate speakers:SpeakersPage}"/>
-        </Tab>
-    </TabBar>
+
+    <ShellContent Title="Programm" ContentTemplate="{DataTemplate sessions:SessionsPage}"/>
+    <ShellContent Title="Sprecher" ContentTemplate="{DataTemplate speakers:SpeakersPage}"/>
+
 
 </Shell>
